@@ -1,40 +1,35 @@
 {
   "name": "techbridge-solutions",
-  "version": "0.1.0",
-  "description": "Professional multi-page website for TechBridge Solutions - A Romanian IT company",
-  "main": "index.js",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": [
-    "techbridge",
-    "romanian-it",
-    "web-development",
-    "digital-solutions",
-    "bucharest",
-    "nextjs",
-    "corporate-website"
-  ],
-  "author": "TechBridge Solutions Team",
-  "license": "MIT",
   "dependencies": {
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.1",
-    "framer-motion": "^11.0.0"
+    "next": "14.2.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/drei": "^9.117.3",
+    "gsap": "^3.12.5",
+    "framer-motion": "^11.11.17",
+    "lenis": "^1.1.17",
+    "react-icons": "^5.3.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
-    "postcss": "^8",
+    "@types/three": "^0.169.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9",
+    "eslint-config-next": "14.2.18",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
 }
