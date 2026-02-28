@@ -1,31 +1,33 @@
 "use client";
 
-import React from "react";
-import dynamic from 'next/dynamic';
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
-// Dynamically import components to avoid SSR issues
-const Hero3D = dynamic(() => import("@/components/sections/Hero3D"), { ssr: false });
-const Services = dynamic(() => import("@/components/sections/Services"), { ssr: false });
-const About = dynamic(() => import("@/components/sections/About"), { ssr: false });
-const Portfolio = dynamic(() => import("@/components/sections/Portfolio"), { ssr: false });
-const Technologies = dynamic(() => import("@/components/sections/Technologies"), { ssr: false });
-const Team = dynamic(() => import("@/components/sections/Team"), { ssr: false });
-const Contact = dynamic(() => import("@/components/sections/Contact"), { ssr: false });
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { ScrollControls, Scroll } from "@react-three/drei";
+import Scene from "@/components/3d/Scene";
+import Overlay from "@/components/ui/Overlay";
+import "@/app/globals.css";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Navbar />
-      <Hero3D />
-      <Services />
-      <About />
-      <Portfolio />
-      <Technologies />
-      <Team />
-      <Contact />
-      <Footer />
-    </main>
+    <div className="w-full h-screen overflow-hidden bg-black">
+      <Canvas
+        shadows
+        camera={{ position: [0, 0, 5], fov: 75 }}
+        gl={{ 
+          antialias: true,
+          alpha: true,
+          powerPreference: "high-performance"
+        }}
+      >
+        <Suspense fallback={null}>
+          <ScrollControls pages={6} damping={0.1}>
+            <Scene />
+            <Scroll html>
+              <Overlay />
+            </Scroll>
+          </ScrollControls>
+        </Suspense>
+      </Canvas>
+    </div>
   );
 }
