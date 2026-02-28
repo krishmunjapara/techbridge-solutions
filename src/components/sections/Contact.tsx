@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact" className="section-padding">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Get In Touch</h2>
-        <p className="text-xl text-gray-400 text-center mb-16">Ready to transform your business? Let's talk!</p>
+        <p className="text-xl text-gray-400 text-center mb-16">Ready to transform your business? Let&apos;s talk!</p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
