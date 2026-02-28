@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-threejs",
+  "version": "0.1.0",
+  "description": "A modern 3D portfolio website built with Three.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "threejs",
+    "portfolio",
+    "3d",
+    "webgl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.12"
+  }
+}
